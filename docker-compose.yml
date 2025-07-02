@@ -1,0 +1,13 @@
+
+services:
+  rtc-tester-v2:
+    build: .
+    volumes:
+      - .:/app
+      - /home/macmysz/data:/app/data
+    working_dir: /app
+    environment:
+      - DELAY=${DELAY}
+      - PCNUM=${PCNUM}
+    restart: unless-stopped
+
