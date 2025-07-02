@@ -1,3 +1,3 @@
 #!/bin/bash
 
-rm -rf /home/macmysz/data/*
+sudo rm -rf /home/macmysz/data/*
