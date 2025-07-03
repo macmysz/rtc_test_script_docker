@@ -8,7 +8,7 @@ WORKDIR /app
 COPY rtc_tester_v2.py requirements.txt /app/
 
 # Instalujemy zależności
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --default-timeout=1000 --no-cache-dir -r requirements.txt
 
 # Tworzymy katalog na dane
 RUN mkdir /data
