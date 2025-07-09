@@ -77,7 +77,7 @@ def plot_from_csv(csv_file, output_svg="plot.svg"):
         linestyle='--',
         zorder=5
     )
-    plt.title("Delta czasu RTC vs NTP")
+    plt.title(f"Delta czasu RTC vs NTP [wolf-dev-rtc{pc_num}]")
     plt.xlabel("Data i godzina (RTC)")
     plt.ylabel("Delta [ms]")
     plt.grid(True)
