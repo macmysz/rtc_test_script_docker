@@ -19,14 +19,6 @@ sudo rm -rf /home/macmysz/data/*
 
 * Run podman
 ```
-PCNUM=X
-podman run -d \
-  --name rtc-tester-v2 \
-  -v .:/app \
-  -v /home/macmysz/data:/app/data \
-  -w /app \
-  -e DELAY=${DELAY} \
-  -e PCNUM=${PCNUM} \
-  --restart=unless-stopped \
-  macmysz/ntp_rtc_logger_v2:latest
+podman run -d --replace  --name rtc-tester-v2   -v /home/macmysz/data:/app/data:Z   -w /app   -e DELAY=600   -e PCNUM=X   --restart=unless-stopped   macmysz/ntp_rtc_logger_v2:latest
+
   ```
